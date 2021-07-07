@@ -1,41 +1,92 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <link rel = "stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"/>
-    <link rel="stylesheet"  href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
-      integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf"
-      crossorigin="anonymous"/>
-    <link rel="stylesheet" href="style.css" />
-    <title>Weather API</title>
-</head>
-<body>
-<main class = "container-fluid">
-<div class="container">
-    <div class="row"> 
-        <div class="col-sm-12">
-            <div class="p-6 mb-3 text-white bg-dark text-center"><h1>Weather Dashboard</h1></div> 
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        <link rel = "stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"/>
+        <link rel="stylesheet"  href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+        integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf"
+        crossorigin="anonymous"/>
+        <link rel="stylesheet" href="style.css" />
+        <title>Weather API</title>
+    </head>
+    <body>
+        <main class = "container-fluid">
+            <div class="container">
+                <div class="row"> 
+                    <div class="col-sm-12">
+                        <div class="p-6 mb-3 text-white bg-dark text-center"><h1>Weather Dashboard</h1></div> 
+                    </div>
+                    <form id="form-submit">
+                        <div class="form-group"></div>
+                        <label>city: </label>
+                        <input type="text" class="form-control" id="city" placeholder="ex. Seattle...">
+                        <small class="form-text">please enter city</small>
+                        <button type ="submit" class="btn-primary mt-4">Submit</button>
+                    </form>
+                    <p id="city-name"></p>
+                    <p id="city-weather"></p>
+                    <p id="city-temp"></p>
+                    <p id="city-conditions"></p>
+                    <p id="city-humidity"></p>
+                    <p id="city-wind-speed"></p>
+                    <p id="city-uv-index"></p>
+                    </div>
+    <div class="forecast">
+         <h4>5-Day Forecast:</h4>
+        <div class="row " id="five-day">
+          <div class="col-sm-4">
+            <div class="five card text-white bg-primary mb-4">
+             <div id="1" class="card-body">
+                 <p class="card-text"></p>
+             </div>
+             </div>
+          </div>
+              <div class="col-sm-4">
+                <div class="five card text-white bg-primary mb-4">
+                  <div id="2" class="card-body">
+                    <p class="card-text"></p>
+                  </div>
+                </div>
+              </div>
+              <div class="col-sm-4">
+                <div class="five card text-white bg-primary mb-4">
+                  <div id="3" class="card-body">
+                    <p class="card-text"></p>
+                  </div>
+                </div>
+              </div>
+              <div class="col-sm-4">
+                <div class="five card text-white bg-primary mb-4">
+                  <div id="4" class="card-body">
+                    <p class="card-text"></p>
+                  </div>
+                </div>
+              </div>
+              <div class="col-sm-4">
+                  <div class="five card  text-white bg-primary mb-4">
+                    <div id="5" class="card-body">
+                      <p class="card-text"></p>
+                    </div>
+                  </div>
+                </div>
         </div>
+      <div class="col-sm-2"></div>
+    </div>
+  </div>       
+    </div>
+    <div class="row">
+        <div class="col-4">
+        </div>
+      </div>    
+    </div>
+
+
+
 
        
-        <form id="form-submit">
-            <div class="form-group"></div>
-            <label>city: </label>
-            <input type="text" class="form-control" id="city" placeholder="ex. Seattle...">
-            <small class="form-text">please enter city</small>
-            <button type ="submit" class="btn-primary mt-4">Submit</button>
-        </form>
-        <p id="city-name"></p>
-        <p id="city-weather"></p>
-        <p id="city-temp"></p>
-        <p id="city-conditions"></p>
-        <p id="city-humidity"></p>
-        <p id="city-wind-speed"></p>
-        <p id="city-uv-index"></p>
-    </div>
     
 </div>
 </main>
