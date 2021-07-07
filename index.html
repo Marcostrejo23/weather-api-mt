@@ -10,36 +10,39 @@
     />
     <link rel="stylesheet"  href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
       integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf"
-      crossorigin="anonymous"
-    />
+      crossorigin="anonymous"/>
     <link rel="stylesheet" href="style.css" />
-    <title>Weather API</title>
+    <title>Weather Dashboard</title>
 </head>
 <body>
-  <main class = "container-fluid">
+<main class = "container-fluid">
+<div class="container">
 
-      <div class="jumbotron bg-secondary"> </div>
-      <div class="container">
-          <h1>The Weather Site</h1>
-          <form id="form-submit">
-              <div class="form-group"></div>
-              <label>city: </label>
-              <input type="text" class="form-control" id="city" placeholder="ex. Seattle...">
-              <small class="form-text">please enter city</small>
-              <button type ="submit" class="btn-primary mt-4">Submit</button>
-            </form>
-            <p id="city-name"></p>
-            <p id="city-weather"></p>
-            <p id="city-temp"></p>
-            <p id="city-conditions"></p>
-            <p id="city-humidity"></p>
-            <p id="city-wind-speed"></p>
-            <p id="city-uv-index"></p>
-        </div>
+    <div class="row"> 
         
-    </main>
-        <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
-        <script src="script.js"></script>
+    </div> <div class="container">
+        <h1>The Weather Site</h1>
+        <form id="form-submit">
+            <div class="form-group"></div>
+            <label>city: </label>
+            <input type="text" class="form-control" id="city" placeholder="ex. Seattle...">
+            <small class="form-text">please enter city</small>
+            <button type ="submit" class="btn-primary mt-4">Submit</button>
+        </form>
+        <p id="city-name"></p>
+        <p id="city-weather"></p>
+        <p id="city-temp"></p>
+        <p id="city-conditions"></p>
+        <p id="city-humidity"></p>
+        <p id="city-wind-speed"></p>
+        <p id="city-uv-index"></p>
+    </div>
+    
+</div>
+</main>
+<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
+<script src="script.js"></script>
+
 </body>
 </html>
