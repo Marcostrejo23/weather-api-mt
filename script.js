@@ -18,12 +18,10 @@ $(document).ready(function () {
         }
     }
     storedCity()
-
     $(".button").on("click", function (event) {
         event.preventDefault();
         let city = $('.form-control').val()
         let listedCities = [];
-
         let recentCity = JSON.parse(localStorage.getItem('cities')) || []
         $('.previous-cities').val(recentCity);
         let savedCity = {
@@ -31,7 +29,6 @@ $(document).ready(function () {
         };
         recentCity.push(savedCity);
         localStorage.setItem('cities', JSON.stringify(recentCity));
-
         storedCity()
         search(city);
     })

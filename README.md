@@ -9,7 +9,7 @@ This application was built to show a user today's weather and a five day forecas
 
 Technologies used: 
 
-HTML, CSS, Bootstsrap, Javascript, Jquery 
+HTML, CSS, Bootstrap, Javascript, Jquery 
 
 Screenshots:
 
