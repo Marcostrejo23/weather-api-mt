@@ -66,11 +66,11 @@ $(document).ready(function () {
                         indexNumberEl.text(indexNumber);
                         indexNumberEl.attr('id', 'index-number');
                         if (indexNumber <= 2) {
-                            indexNumberEl.addClass('d-inline p-2 bg-success text-white')
+                            indexNumberEl.addClass('d-inline p-3 bg-secondary text-info')
                         } else if (indexNumber >= 3 && indexNumber <= 7) {
-                            indexNumberEl.addClass('d-inline p-2 bg-warning text-white')
+                            indexNumberEl.addClass('d-inline p-3 bg-secondary text-info')
                         } else {
-                            indexNumberEl.addClass('d-inline p-2 bg-danger text-white')
+                            indexNumberEl.addClass('d-inline p-3 bg-secondary text-info')
                         }
                         let todaysWeather = response.weather[0].icon;
                         fahrenheit.text("Temperature: " + temp.toFixed(1) + "°F")
@@ -97,39 +97,40 @@ $(document).ready(function () {
                         $('#3').empty();
                         $('#4').empty();
                         $('#5').empty();
-                        let dayOne = $('<h6>');
-                        let dayTwo = $('<h6>');
-                        let dayThree = $('<h6>');
-                        let dayFour = $('<h6>');
-                        let dayFive = $('<h6>');
-                        dayOne.text(moment(date).add(1, 'days').format("MMM Do YY"));
-                        dayTwo.text(moment(date).add(2, 'days').format("MMM Do YY"));
-                        dayThree.text(moment(date).add(3, 'days').format("MMM Do YY"));
-                        dayFour.text(moment(date).add(4, 'days').format("MMM Do YY"));
-                        dayFive.text(moment(date).add(5, 'days').format("MMM Do YY"));
-                        $('#1').append(dayOne);
-                        $('#2').append(dayTwo);
-                        $('#3').append(dayThree);
-                        $('#4').append(dayFour);
-                        $('#5').append(dayFive);
+                        let one = $('<h5>');
+                        let two = $('<h5>');
+                        let three = $('<h5>');
+                        let four = $('<h5>');
+                        let five = $('<h5>');
+                        one.text(moment(date).add(1, 'days').format("MMM Do YY"));
+                        two.text(moment(date).add(2, 'days').format("MMM Do YY"));
+                        three.text(moment(date).add(3, 'days').format("MMM Do YY"));
+                        four.text(moment(date).add(4, 'days').format("MMM Do YY"));
+                        five.text(moment(date).add(5, 'days').format("MMM Do YY"));
+                        $('#1').append(one);
+                        $('#2').append(two);
+                        $('#3').append(three);
+                        $('#4').append(four);
+                        $('#5').append(five);
+
                         let j = 1
                         for (var i = 0; i < responseThree.list.length; i++) {
                             if (responseThree.list[i].dt_txt.indexOf("12:00:00") !== -1 &&
                                 responseThree.list[i].dt_txt.indexOf("15:00:00") !== -1 ||
                                 responseThree.list[i].dt_txt.indexOf("18:00:00") !== -1) {
                                 let selector = "#" + j;
-                                let forecastTempOne = (responseThree.list[i].main.temp_max - 273.15) * 9 / 5 + 32
-                                let forecastFahrenheitOne = $('<p>');
-                                let forecastHumidityOne = $('<p>');
-                                let forecastWeatherOne = responseThree.list[i].weather[0].icon;
-                                let weatherIconOne = 'https://openweathermap.org/img/wn/' + forecastWeatherOne + ".png";
-                                let displayIconOne = $('<img>')
-                                displayIconOne.attr('src', weatherIconOne);
-                                forecastFahrenheitOne.text("Temp: " + forecastTempOne.toFixed(1) + "°F");
-                                forecastHumidityOne.text("Humidity: " + responseThree.list[i].main.humidity + '%');
-                                $(selector).append(forecastFahrenheitOne);
-                                $(selector).append(forecastHumidityOne);
-                                $(selector).append(displayIconOne);
+                                let forecast1 = (responseThree.list[i].main.temp_max - 273.15) * 9 / 5 + 32
+                                let forecastFahrenheit = $('<p>');
+                                let forecastHumidity = $('<p>');
+                                let forecastWeather = responseThree.list[i].weather[0].icon;
+                                let weatherIcon1 = 'https://openweathermap.org/img/wn/' + forecastWeather + ".png";
+                                let displayIcon1 = $('<img>')
+                                displayIcon1.attr('src', weatherIcon1);
+                                forecastFahrenheit.text("Temp: " + forecast1.toFixed(1) + "°F");
+                                forecastHumidity.text("Humidity: " + responseThree.list[i].main.humidity + '%');
+                                $(selector).append(forecastFahrenheit);
+                                $(selector).append(forecastHumidity);
+                                $(selector).append(displayIcon1);
                                 j++;
                             }
                         }
