@@ -35,7 +35,7 @@ $(document).ready(function () {
         storedCity()
         search(city);
     })
-    $('.previous-cities').on('click', "li", function (event) {
+    $('.previous-cities').on('click', "li", function(event){
         event.preventDefault();
         let city = $(this).text()
         search(city);
@@ -90,7 +90,6 @@ $(document).ready(function () {
                         $('.city-name').append(indexEl);
                         $('.city-name').append(indexNumberEl);
                     })
-
                 let queryURLThree = 'https://api.openweathermap.org/data/2.5/forecast?q=' + city + '&appid=d37e271ed749a6e729f670537daa3e62'
                 $.ajax({
                     url: queryURLThree,
