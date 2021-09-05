@@ -39,17 +39,17 @@ $(document).ready(function () {
     })
     function search(city) {
         $(".five").show()
-        let queryURLOne = 'https://api.openweathermap.org/data/2.5/weather?q=' + city + '&appid:d37e271ed749a6e729f670537daa3e62'
+        let queryURL1 = 'https://api.openweathermap.org/data/2.5/weather?q=' + city + '&appid:d37e271ed749a6e729f670537daa3e62'
         $.when(
             $.ajax({
-                url: queryURLOne,
+                url: queryURL1,
                 method: "GET"
             })).then(function (response) {
                 let latitude = response.coord.lat;
                 let longitude = response.coord.lon;
-                let queryURLTwo = 'https://api.openweathermap.org/data/2.5/uvi?appid=d37e271ed749a6e729f670537daa3e62&lat=' + latitude + '&lon=' + longitude;
+                let queryURL2 = 'https://api.openweathermap.org/data/2.5/uvi?appid=d37e271ed749a6e729f670537daa3e62&lat=' + latitude + '&lon=' + longitude;
                 $.ajax({
-                    url: queryURLTwo,
+                    url: queryURL2,
                     method: "GET"
                 }).then(function (responseTwo){
                         $('.city-name').empty();
@@ -88,8 +88,8 @@ $(document).ready(function () {
                         $('.city-name').append(indexNumberEl);
                     })
 
-                let queryURLThree = 'https://api.openweathermap.org/data/2.5/forecast?q=' + city + '&appid=d37e271ed749a6e729f670537daa3e62'
-                $.ajax({url: queryURLThree,
+                let queryURL3 = 'https://api.openweathermap.org/data/2.5/forecast?q=' + city + '&appid=d37e271ed749a6e729f670537daa3e62'
+                $.ajax({url: queryURL3,
                 method: "GET"
                 }).then(function (responseThree) {
                         $('#1').empty();
