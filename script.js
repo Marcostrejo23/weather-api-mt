@@ -39,7 +39,7 @@ $(document).ready(function () {
     })
     function search(city) {
         $(".five").show()
-        let queryURL1 = 'https://api.openweathermap.org/data/2.5/weather?q=' + city + '&appid:d37e271ed749a6e729f670537daa3e62'
+        let queryURL1 = 'https://api.openweathermap.org/data/2.5/weather?q=' + city + '&appid=d37e271ed749a6e729f670537daa3e62'
         $.when(
             $.ajax({
                 url: queryURL1,
