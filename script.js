@@ -91,7 +91,7 @@ $(document).ready(function () {
                 let queryURL3 = 'https://api.openweathermap.org/data/2.5/forecast?q=' + city + '&appid=d37e271ed749a6e729f670537daa3e62'
                 $.ajax({url: queryURL3,
                 method: "GET"
-                }).then(function (responseThree) {
+                }).then(function (responseThree){
                         $('#1').empty();
                         $('#2').empty();
                         $('#3').empty();
@@ -112,7 +112,6 @@ $(document).ready(function () {
                         $('#3').append(three);
                         $('#4').append(four);
                         $('#5').append(five);
-
                         let j = 1
                         for (var i = 0; i < responseThree.list.length; i++) {
                             if (responseThree.list[i].dt_txt.indexOf("12:00:00") !== -1 &&
